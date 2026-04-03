@@ -1,10 +1,10 @@
 import { Question, Category } from "./types";
 
 const getCategory = (index: number): Category => {
-  if (index === 0 || index >= 117) return "Trivia & Historie";
-  if (index <= 26) return "Staffel 1 & 2";
-  if (index <= 53) return "Staffel 3 & 4";
-  if (index <= 79) return "Staffel 5 & 6";
+  if (index === 0 || (index >= 117 && index <= 159)) return "Trivia & Historie";
+  if (index <= 26 || (index >= 160 && index <= 164)) return "Staffel 1 & 2";
+  if (index <= 53 || (index >= 165 && index <= 169)) return "Staffel 3 & 4";
+  if (index <= 79 || (index >= 170 && index <= 174)) return "Staffel 5 & 6";
   return "Staffel 7 & 8";
 };
 
@@ -1128,6 +1128,150 @@ const rawData = [
     "antwort": "Curd Jürgens",
     "schwierigkeitsgrad": 3,
     "fakt": "Jürgens galt als einer der wenigen deutschen Schauspieler mit echtem Weltstar-Status, die regelmäßig in der Serie gastierten."
+  },
+  // Staffel 1 & 2 (Level 1)
+  {
+    "frage": "Wie heißt der Hauptdarsteller, der Kommissar Keller spielt?",
+    "optionen": ["Horst Tappert", "Siegfried Lowitz", "Erik Ode", "Günther Schramm"],
+    "antwort": "Erik Ode",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Erik Ode verkörperte den väterlichen Kommissar Keller in allen 97 Folgen der Serie."
+  },
+  {
+    "frage": "Wer ist der junge Assistent von Kommissar Keller in den ersten Staffeln?",
+    "optionen": ["Harry Klein", "Robert Heines", "Gerd Heymann", "Willi Kreutzer"],
+    "antwort": "Harry Klein",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Fritz Wepper spielte Harry Klein, bevor er als Assistent zu 'Derrick' wechselte."
+  },
+  {
+    "frage": "Wie heißt die Sekretärin im Kommissariat, die Keller oft unterstützt?",
+    "optionen": ["Helga Lauer", "Käthe Rehbein", "Irene Pauli", "Frau Gutmann"],
+    "antwort": "Käthe Rehbein",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Käthe Rehbein (gespielt von Helma Seitz) war die gute Seele des Teams und wurde oft 'Rehbeinchen' genannt."
+  },
+  {
+    "frage": "In welcher bayerischen Stadt spielt die Serie 'Der Kommissar'?",
+    "optionen": ["Nürnberg", "Augsburg", "Regensburg", "München"],
+    "antwort": "München",
+    "schwierigkeitsgrad": 1,
+    "fakt": "München war der feste Schauplatz der Ermittlungen, oft mit Fokus auf Schwabing oder Grünwald."
+  },
+  {
+    "frage": "In welchem visuellen Stil wurde die Serie ursprünglich ausgestrahlt?",
+    "optionen": ["In Farbe", "In Schwarz-Weiß", "In Sepia", "In Technicolor"],
+    "antwort": "In Schwarz-Weiß",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Die Serie behielt ihren charakteristischen Schwarz-Weiß-Look bis zur letzten Folge 1976 bei."
+  },
+  // Staffel 3 & 4 (Level 1)
+  {
+    "frage": "Welcher Assistent ist der Bruder von Erwin Klein?",
+    "optionen": ["Harry Klein", "Robert Heines", "Gerd Heymann", "Grabert"],
+    "antwort": "Harry Klein",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Die Brüder Fritz und Elmar Wepper spielten nacheinander die Assistenten-Rollen."
+  },
+  {
+    "frage": "Wer schrieb fast alle Drehbücher für die Serie 'Der Kommissar'?",
+    "optionen": ["Wolfgang Menge", "Herbert Reinecker", "Karl May", "Edgar Wallace"],
+    "antwort": "Herbert Reinecker",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Reinecker war der prägende Autor des deutschen Fernsehkrimis und erfand auch 'Derrick'."
+  },
+  {
+    "frage": "Welches alkoholische Getränk trinkt Kommissar Keller oft in seinem Büro?",
+    "optionen": ["Bier", "Wein", "Cognac", "Wodka"],
+    "antwort": "Cognac",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Der Cognac gehörte zu den rituellen Momenten der Fallbesprechung im Büro."
+  },
+  {
+    "frage": "Wie wird die Sekretärin Käthe Rehbein vom Team oft liebevoll genannt?",
+    "optionen": ["Käthchen", "Rehbeinchen", "Die gute Fee", "Sekretärin"],
+    "antwort": "Rehbeinchen",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Dieser Spitzname unterstrich das fast familiäre Verhältnis innerhalb des Teams."
+  },
+  {
+    "frage": "Welche Automarke wird vom Ermittlerteam in der Serie häufig genutzt?",
+    "optionen": ["Mercedes-Benz", "Volkswagen", "BMW", "Opel"],
+    "antwort": "BMW",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Als Münchner Serie war der Einsatz von BMW-Fahrzeugen fast schon obligatorisch."
+  },
+  // Staffel 5 & 6 (Level 1)
+  {
+    "frage": "Wer ersetzte Harry Klein als Assistent im Team von Keller?",
+    "optionen": ["Robert Heines", "Gerd Heymann", "Willi Kreutzer", "Schimanski"],
+    "antwort": "Robert Heines",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Elmar Wepper übernahm die Rolle des Robert Heines, nachdem sein Bruder Fritz die Serie verlassen hatte."
+  },
+  {
+    "frage": "Welcher Schauspieler verkörpert den Assistenten Robert Heines?",
+    "optionen": ["Fritz Wepper", "Elmar Wepper", "Horst Tappert", "Erik Ode"],
+    "antwort": "Elmar Wepper",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Elmar Wepper blieb bis zum Ende der Serie im Jahr 1976 Teil des Teams."
+  },
+  {
+    "frage": "In welchem Jahrzehnt spielt die Serie 'Der Kommissar' hauptsächlich?",
+    "optionen": ["1950er", "1960er", "1970er", "1980er"],
+    "antwort": "1970er",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Die Serie lief von 1969 bis 1976 und prägte das Krimi-Genre dieses Jahrzehnts."
+  },
+  {
+    "frage": "Was ist ein bekanntes Markenzeichen von Kommissar Keller, wenn er draußen ist?",
+    "optionen": ["Sein Hut", "Sein Regenschirm", "Seine Pfeife", "Sein Gehstock"],
+    "antwort": "Sein Hut",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Der Hut verlieh Erik Ode die klassische Erscheinung eines Ermittlers der alten Schule."
+  },
+  {
+    "frage": "Wer war der Produzent der Serie 'Der Kommissar'?",
+    "optionen": ["Helmut Ringelmann", "Wolfgang Petersen", "Rainer Werner Fassbinder", "Alfred Hitchcock"],
+    "antwort": "Helmut Ringelmann",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Ringelmann war einer der erfolgreichsten deutschen Krimi-Produzenten (auch 'Derrick', 'Der Alte')."
+  },
+  // Staffel 7 & 8 (Level 1)
+  {
+    "frage": "In welchem Jahr wurde die letzte Folge von 'Der Kommissar' ausgestrahlt?",
+    "optionen": ["1970", "1973", "1976", "1980"],
+    "antwort": "1976",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Nach 97 Folgen endete die Serie auf dem Höhepunkt ihres Erfolgs."
+  },
+  {
+    "frage": "Wie lautet der Vorname von Kommissar Keller?",
+    "optionen": ["Herbert", "Hans", "Heinrich", "Hermann"],
+    "antwort": "Herbert",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Herbert Keller war der Name der von Erik Ode gespielten Hauptfigur."
+  },
+  {
+    "frage": "Wie viele Folgen der Serie 'Der Kommissar' wurden insgesamt produziert?",
+    "optionen": ["50", "75", "97", "120"],
+    "antwort": "97",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Alle 97 Folgen wurden von Herbert Reinecker geschrieben."
+  },
+  {
+    "frage": "Welche Krimiserie übernahm den Sendeplatz nach dem Ende von 'Der Kommissar'?",
+    "optionen": ["Tatort", "Derrick", "Der Alte", "Siska"],
+    "antwort": "Derrick",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Horst Tappert als Derrick wurde der neue Star des ZDF-Freitagabends."
+  },
+  {
+    "frage": "Wer spielte die Rolle des Assistenten Robert in den späten Folgen?",
+    "optionen": ["Elmar Wepper", "Fritz Wepper", "Günther Schramm", "Reinhard Glemnitz"],
+    "antwort": "Elmar Wepper",
+    "schwierigkeitsgrad": 1,
+    "fakt": "Elmar Wepper bildete zusammen mit Erik Ode das Kernteam der späten Jahre."
   }
 ];
 
