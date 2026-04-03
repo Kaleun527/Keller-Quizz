@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-noir-black: #0a0a0a;
+  --color-noir-white: #f5f5f5;
+  --color-noir-gray-dark: #262626;
+  --color-noir-gray-light: #d4d4d4;
+}
+
+@layer base {
+  body {
+    @apply bg-noir-black text-noir-white font-sans antialiased overflow-x-hidden;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  }
+
+  h1, h2, h3 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+.noir-card {
+  @apply bg-noir-gray-dark border border-noir-gray-light/20 shadow-2xl;
+}
+
+.noir-button {
+  @apply px-6 py-3 border-2 border-noir-white text-noir-white font-mono uppercase tracking-widest transition-all duration-300 hover:bg-noir-white hover:text-noir-black active:scale-95 disabled:opacity-50;
+}
+
+.noir-input {
+  @apply bg-transparent border-b-2 border-noir-gray-light p-2 font-mono focus:outline-none focus:border-noir-white transition-colors;
+}
+
+/* Scanline effect */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.1) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.02),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.02)
+  );
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* Vignette */
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 150px rgba(0,0,0,0.8);
+  pointer-events: none;
+  z-index: 51;
+}
+
